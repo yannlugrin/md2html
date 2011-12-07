@@ -2,7 +2,7 @@
 
 require 'md2html'
 
-source = File.expand_path(ARVV.shift)
+source = File.expand_path(ARGV.shift)
 target = !ARGV.empty? ? File.expand_path(ARGV.shift) : nil
 
 Md2html.run(source, target)

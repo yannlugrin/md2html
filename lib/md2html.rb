@@ -7,7 +7,7 @@ module Md2html
 
     File.open(target, 'w+') do |file|
       renderer = Redcarpet::Render::HTML.new
-      markdown = Redcarpet::Markdown.new(renderer)
+      markdown = Redcarpet::Markdown.new(renderer, :tables => true, :autolink => true)
 
       file << markdown.render(File.read(source))
     end
